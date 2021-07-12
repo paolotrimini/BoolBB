@@ -1,0 +1,100 @@
+//variables
+@import 'variables';
+
+li a {
+    list-style-type: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.box-footer {
+
+    .linea {
+        border-top: 1px solid lightgray;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 15px 5%;
+        max-width: 100vw;
+
+        .left-side {
+            display: flex;
+
+            ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                //debug
+                //background-color: green;
+
+                li {
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .right-side {
+            display: flex;
+
+            ul {
+                display: flex;
+                align-items: baseline;
+                list-style: none;
+                //background-color: green; //$lt_gray
+                //margin: 15px;
+
+                li {
+                    //line-height: 35px;
+                    padding: 0 5px;
+                }
+            }
+
+        }
+
+    }
+
+
+}
+
+
+// MEDIA QUERY
+
+@media screen and (max-width: 917px) {
+
+    .box-footer {
+        display: flex;
+        flex-direction: column;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            .left-side {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 630px) {
+
+    .container {
+
+        .left-side ul {
+            flex-direction: column;
+            text-align: center;
+
+            li {
+                margin-top: 10px;
+            }
+        }
+
+    }
+
+}

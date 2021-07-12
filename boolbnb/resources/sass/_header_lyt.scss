@@ -1,0 +1,196 @@
+header {
+  height: 80px;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+
+  .container-header {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .logo-header {
+    flex-basis: calc(100% / 3);
+
+    a {
+      margin-left: 10px;
+    }
+  }
+
+  .searchbar-header {
+    display: flex;
+    flex-basis: calc(100% / 3);
+    margin: auto;
+    justify-content: center;
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      border: 2px solid #ff5a5f;
+      border-radius: 10px;
+      padding: 5px 10px;
+      outline: none;
+      background-color: white;
+      width: 60%;
+
+      #searchString {
+        width: 80%;
+      }
+
+      input,
+      button {
+        all: unset;
+      }
+
+      button i {
+        background-color: inherit;
+        border-radius: 100%;
+        padding: 10px 0;
+        padding-left: 5px;
+        color: #ff5a5f;
+        cursor: pointer;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .user-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-basis: calc(100% / 3);
+    height: 80px;
+    align-items: center;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+    }
+
+    a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .hamburger {
+      background-color: transparent;
+      border: 0;
+      color: black;
+      font-size: 20px;
+      display: none;
+    }
+
+    .hamburger:focus {
+      outline: none;
+    }
+
+    .login-header-btn,
+    .register-header-btn {
+      padding: 7px 14px;
+      border: 2px solid #ff5a5f;
+      border-radius: 20px;
+      transition: background-color 0.5s, color 0.5s;
+
+      &:hover {
+        color: white;
+        background-color: #ff5a5f;
+      }
+    }
+
+    .hello-user {
+      margin: 0 10px;
+    }
+
+    .logout-header-btn,
+    .dashboard-header-btn {
+      font-size: 17px;
+      padding: 7px 14px;
+      border: 2px solid #ff5a5f;
+      border-radius: 20px;
+      transition: background-color 0.5s, color 0.5s;
+
+      &:hover {
+        color: white;
+        background-color: #ff5a5f;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container-header {
+    width: 100% !important;
+    margin: auto;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .logo-header {
+    img {
+      width: 70% !important;
+      flex-shrink: 0;
+    }
+  }
+
+  .logout-header-btn,
+  .dashboard-header-btn,
+  .login-header-btn,
+  .register-header-btn {
+    &:hover {
+      color: black !important;
+    }
+  }
+
+  .nav-ul {
+    display: none !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    right: 10px;
+    top: 70px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+    .dashboard-header-btn,
+    .logout-header-btn,
+    .login-header-btn,
+    .register-header-btn {
+      display: block;
+      margin: 3px;
+      background-color: transparent !important;
+      border: none !important;
+    }
+  }
+
+  .nav-ul.show {
+    display: flex !important;
+  }
+
+  .hamburger {
+    display: block !important;
+    margin-right: 20px !important;
+    position: relative !important;
+  }
+
+  .searchbar-header {
+    form {
+      width: 100% !important;
+
+      #searchString {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .login-header-btn,
+  .register-header-btn {
+    margin: 1px !important;
+  }
+}

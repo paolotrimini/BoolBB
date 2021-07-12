@@ -1,0 +1,86 @@
+@import "variables";
+
+.container-login {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    .card-body {
+        text-align: center;
+        padding: 10%;
+
+        border: 2px solid black;
+        border-radius: 10px;
+
+        box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.411);
+    }
+
+    .form-group {
+
+
+        margin: 10px 0;
+
+        display: flex;
+
+        label {
+            width: 170px;
+            line-height: 55px;
+        }
+
+        div {
+            margin-left: 12px;;
+        }
+
+        .form-check {
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            label {
+                width: min-content;
+            }
+        }
+
+        &:last-child {
+            justify-content: center;
+        }
+    }
+
+    h1:first-of-type {
+        display: block;
+        text-align: center;
+    }
+
+    input {
+        margin: 10px 0;
+        padding: 3px 6px;
+        border-radius: 20px;
+        outline: none;
+        border-color: $header_red;
+        border-style: solid;
+    }
+
+    button {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: $header_red;
+        transition: background-color 0.5s, color 0.5s;
+
+        &:hover {
+            background-color: $header_red;
+            color: white;
+        }
+    }
+
+    .forget-psw {
+        display: block;
+        margin-top: 15px;
+    }
+
+    
+}

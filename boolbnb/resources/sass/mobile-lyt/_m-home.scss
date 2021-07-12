@@ -1,0 +1,63 @@
+
+
+@media screen and (max-width:800px) {
+
+
+  .container-ap {
+    .row {  
+      .mini-container {
+        min-width: 75%;
+
+        a { 
+          .details {
+            display: none;
+          }
+        }
+
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width:500px) {
+
+
+  .container-ap {
+    .row {  
+      .mini-container {
+        min-width: 75%;
+        max-height: 125px;
+
+        .ap-img {
+          margin-top: -77px;
+        }
+        
+        a { 
+          .white-buble {
+            font-size: 15px;
+            .details {
+              display: none;
+            }
+          }
+        }
+
+      }
+    }
+
+    #adv-body {
+
+      div {
+        h2 {
+          font-size: 80%;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

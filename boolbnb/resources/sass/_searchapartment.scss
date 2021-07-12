@@ -1,0 +1,252 @@
+
+ul, li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.box-container {
+
+    margin-left: 20px;
+
+    
+    // sezione Appartamenti e Mappa
+    .box-app-map {
+        display: flex;
+        justify-content: space-between;
+        height: calc(100vh - 80px);
+        //debug
+        //background-color: lightcyan;
+    
+        .my-apartments{
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            //debug
+            //background-color: lightgoldenrodyellow;
+
+            .box-service {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 10px 20px 40px 0;
+                border: 1px solid lightgrey;
+                //debug
+                //background-color: lightcyan;    
+            
+                .serv-top {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 10px 0;
+                    border-bottom: 0.2px solid lightgrey;
+                    padding:10px 10px 10px 25px;
+                    //debug
+                    //background-color: yellowgreen;
+                }
+            
+                .serv-bottom {
+                    display: flex;
+                    justify-content: space-around;
+                    padding:10px;
+                    //debug
+                    //background-color: cadetblue;
+                }
+            
+                .center {
+                    display: flex;
+                    align-items: center;
+            
+                    label {
+                        margin: 0 10px;
+                    }
+            
+                    .inp {
+                        width: 60px;
+                    }
+                }
+            }
+            
+            h2 {
+                margin: 10px 0;
+            }
+        
+            .myline {
+                border-top: 1px solid lightgray;
+            }
+          
+            .spc-apart {
+                margin: 5px 0;
+                
+                a {
+                    display: flex;
+                    padding: 10px 0;
+                    align-items: center;
+                    display: flex;
+                    color: black;
+                    text-decoration: none;
+    
+                    #img-box {
+                        //width: 25%;
+                        height: 100%;
+        
+                        img {
+                            width: 120px;
+                            height: 120px;
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }
+                    }
+        
+                    .ap-description {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        margin-left: 25px;
+
+                        .box-apts {
+
+                            li {
+                                margin: 5px 0;
+                            }
+
+                            .box-options{
+                                display: flex;
+                                margin-top: 10px;
+     
+                                li {
+                                    margin-right: 15px;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    
+        .box-map {
+            width: 60%;
+        } 
+    }
+    
+    #mymap {
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+
+
+// MEDIA QUERY
+
+@media screen and (max-width: 1200px) {
+    //code
+}
+
+@media screen and (max-width: 880px) {
+   
+    .serv-bottom {
+        display: flex;
+        flex-direction: column;
+        .center {
+            padding: 5px 
+        }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .serv-top {
+        // menu hamburger - test1
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .box-app-map {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .box-map {
+            width: 100vw;
+            height: 600px;
+
+            #mymap {
+                width: 95vw;
+                //height: 100%;
+                border-top: 0.5px solid black;
+            }
+        } 
+
+    }
+}    
+
+@media screen and (max-width: 576px) {
+
+    .box-app-map {
+
+        height: 100%;
+
+        .my-apartments {
+
+            overflow: unset;
+
+            .serv-bottom {
+
+                .center {
+            
+                    label {
+                        margin: 5px 0;
+                    }
+            
+                    .inp {
+                        width: 60px;
+                    }
+                }
+            }
+        
+            .box-title{
+                text-align: center;
+            }
+        
+            .box-list-apt {
+                display: flex;
+                flex-direction: column;
+                margin: 5px 0;
+        
+                .ap-description {
+        
+                    .box-apts {
+                        text-align: center;
+        
+                        .box-options {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+        
+                #img-box {
+                    margin: 15px 0;
+                }
+            }
+    
+        }
+
+        .box-map {
+            min-height: 250px;
+
+            #mymap {
+                width: 95vw;
+                //height: 100%;
+                border-top: 0.5px solid black;
+            }
+        } 
+    }
+}
+
+}

@@ -1,0 +1,96 @@
+// Variables
+@import "variables";
+
+* {
+  // border: 1px solid red;
+
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  box-sizing: border-box;
+
+  //test font
+  font-family: $font-family-sans-serif;
+
+  // test scroll-bar
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(99, 97, 97);
+  }
+
+  // sezione Servizi
+  // .box-service {
+  //   margin: 20px 0 20px 70px;
+
+  //   .my-services input {
+  //     padding: 0 10px;
+  //   }
+  // }
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 80%;
+  padding: 50px 0;
+  margin: auto;
+  flex-grow: 1;
+}
+
+button {
+  cursor: pointer;
+}
+
+.invisible {
+  display: none;
+}
+
+.big-button {
+  padding: 14px;
+
+  font-size: 18px;
+
+  border-radius: 10px;
+  border: none;
+
+  border: 1px solid #ff5a5f;
+}
+
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Benne&display=swap");
+
+// lyt-pages
+@import "header_lyt"; //consigliato margin-top: 80px;
+@import "home";
+@import "footer_lyt";
+@import "apartment";
+@import "dashboard";
+@import "register";
+@import "login";
+@import "createapartment";
+@import "searchapartment";
+@import "sponsorship";
+@import "checkout";
+@import "messageSent";

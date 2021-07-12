@@ -1,0 +1,59 @@
+@import "variables";
+
+.register-container {
+    width: 100;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .border-reg {
+        width: min-content;
+        border: 2px solid black;
+        border-radius: 15px;
+
+        padding: 15px;
+
+        label {
+
+            width: 150px;
+        }
+    
+        .form-group {
+    
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        h1:first-of-type {
+    
+            margin-top: 10px;
+            display: block;
+            text-align: center;
+        }
+    
+        input {
+    
+            padding: 3px 6px;
+            border-radius: 20px;
+            outline: none;
+            border-color: $header_red;
+        }
+    
+        button {
+            
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: $header_red;
+            border-color: black;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .register-container .card-body {
+        width: 90%;
+    }
+}

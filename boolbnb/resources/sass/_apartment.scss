@@ -1,0 +1,291 @@
+.margins {
+    width: 65%;
+    margin: auto;
+}
+
+@media screen and (max-width: 992px) {
+    .margins {
+        width: 85%;
+        margin: auto;
+    }
+
+    .flat-block {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container-text {
+        flex-wrap: wrap;
+    }
+
+    #flat-text-id {
+        width: 100%;
+    }
+
+    .servizi {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .flat-form {
+        margin-top: 15px;
+    }
+}
+
+.container-flat {
+    background-color: #f2f2f2;
+    height: auto;
+    padding-bottom: 40px;
+    color: #1b3c59;
+
+    .flat-description {
+        padding-top: 50px;
+    }
+
+    .flat-block {
+        height: auto;
+        margin-top: 20px;
+        padding: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        .flat-img {
+            display: flex;
+            justify-content: center;
+            max-width: 70%;
+            height: auto;
+            margin: auto;
+            border-radius: 20px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: 0;
+                border-radius: 20px;
+            }
+        }
+
+        .container-text {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+            justify-content: space-around;
+            margin-top: 15px;
+
+            .flat-text {
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+                width: 80%;
+
+                span {
+                    display: inline-block;
+                    margin-top: 15px;
+                    font-size: 18px;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    li {
+                        list-style: none;
+                        display: inline-block;
+                        padding: 15px 0;
+                        font-size: 18px;
+
+                        .rooms-details {
+                            display: inline-block;
+                            font-weight: bold;
+                        }
+
+                        .rooms-details-number {
+                            font-size: 23px;
+                        }
+
+                        i {
+                            margin-left: 2px;
+                        }
+                    }
+                }
+            }
+
+            hr {
+                margin: 25px;
+            }
+        }
+    }
+}
+
+.flat-form {
+    text-align: center;
+
+    input {
+        margin: 10px;
+        border: 1px solid #ccc;
+        padding: 6px 12px;
+        border-radius: 20px;
+        outline: none;
+        font-size: 17px;
+    }
+
+    textarea {
+        height: 150px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 30%;
+        outline: none;
+        resize: none;
+        text-indent: 10px;
+        font-size: 17px;
+    }
+
+    button {
+        padding: 10px 60px;
+        margin: 10px 0;
+        border-radius: 10px;
+        outline: none;
+        border: 2px solid $header_red;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.5s, color 0.5s;
+
+        &:hover {
+            background-color: $header_red;
+            color: white;
+        }
+    }
+}
+
+.my-apartment {
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    .stats {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .stats-container {
+            padding-bottom: 50px;
+        }
+
+        .charts {
+            padding-bottom: 50px;
+            canvas {
+                margin: 40px 0;
+            }
+        }
+    }
+
+    .messages {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-top: 300px;
+        align-items: center;
+
+        .received-msgs {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+
+            .no-msg-received {
+                margin-top: 25px;
+                font-weight: bold;
+            }
+
+            .msg {
+                overflow-y: auto;
+                max-height: 400px;
+                padding: 5px 10px;
+            }
+
+            .msg::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            .msg::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 5px;
+            }
+
+            .msg::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 5px;
+            }
+
+            .msg-row {
+                border-bottom: 1px solid black;
+                padding: 5px;
+
+                .new-msg-from {
+                    color: $header_red;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .flat-block {
+        flex-direction: column !important;
+    }
+
+    .my-apartment {
+        flex-direction: column;
+        .stats {
+            justify-content: center;
+            width: 100% !important;
+        }
+
+        .messages {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .flat-description {
+        text-align: center;
+    }
+
+    .flat-text {
+        text-align: center;
+    }
+
+    .stats-container {
+        text-align: center;
+    }
+    .my-apartment {
+        width: 100% !important;
+    }
+
+    .messages {
+        width: 90% !important;
+    }
+
+    .flat-img {
+        max-width: 95% !important;
+    }
+
+    .charts {
+        width: 90vw !important;
+        height: 400px !important;
+    }
+}
